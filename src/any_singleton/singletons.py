@@ -156,21 +156,6 @@ def singleton(dn: str, x: Any, *args, **kwargs):
     if not is_type and (len(args) > 0 or len(kwargs) > 0):
         raise ValueError('Too many arguments.')
 
-    #if dn not in _g:
-    #    if is_type:
-    #        t = x
-    #        v = t(*args, **kwargs)
-    #    else:
-    #        v = x
-    #
-    #    _add_singleton(dn, v)
-    #
-    #    ret = v
-    #else:
-    #    ret = _get_singleton(dn)
-    #
-    #return ret
-
     if is_type:
         return singleton_instance(dn, x, *args, **kwargs)
     else:
@@ -207,18 +192,6 @@ def _add_cached_return(dn: str, value: Any) -> None:
     """
 
     singleton_value(dn + RETURN_POSTFIX, value)
-
-
-#def _is_return_exists(dn: str) -> bool:
-#    """
-#    Check if the cached return value of a function decorated with `@once` exists.
-#
-#    :param dn: The unique domain name of the function.
-#    :return: - `True`  if the cached return value exists.
-#             - `False` otherwise.
-#    """
-#
-#    return is_exists(dn + RETURN_POSTFIX)
 
 
 def get_cached_return(dn: str) -> Any:
