@@ -1,5 +1,6 @@
 <div align="center">
     <h1>Any-singleton</h1>
+    <p>Provides decorators and utilities for implementing the singleton pattern.</p>
 </div>
 
 ---
