@@ -17,12 +17,6 @@ license = "MIT"
 license-files = ["LICEN[CS]E*"]
 dependencies = []
 
-[dependency-groups]
-dev = [
-    #'pytest',
-    #'pytest-cov'
-]
-
 [build-system]
 requires = ["uv_build >= 0.10.0"]
 build-backend = "uv_build"
