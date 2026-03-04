@@ -1,0 +1,35 @@
+[project]
+name = "any-singleton"
+version = "1.0.0"
+authors = [
+  { name="Orange 233", email="orange_233@foxmail.com" },
+]
+description = "Provides decorators and utilities for implementing the singleton pattern."
+readme = { file = "README.md", content-type = "text/markdown" }
+requires-python = ">=3.0.0"
+keywords = ["singleton"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License"
+]
+license = "MIT"
+license-files = ["LICEN[CS]E*"]
+dependencies = []
+
+[dependency-groups]
+dev = [
+    #'pytest',
+    #'pytest-cov'
+]
+
+[build-system]
+requires = ["uv_build >= 0.10.0"]
+build-backend = "uv_build"
+
+[project.urls]
+Homepage = "https://github.com/Orange23333/any-singleton"
+Repository = "https://github.com/Orange23333/any-singleton"
+Documentation = "https://github.com/Orange23333/any-singleton/blob/main/README.md#Documentation"
+Issues = "https://github.com/Orange23333/any-singleton/issues"
+Changelog = "https://github.com/Orange23333/any-singleton/blob/main/CHANGELOG.md"
