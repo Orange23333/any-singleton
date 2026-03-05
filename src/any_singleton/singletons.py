@@ -1,8 +1,6 @@
 from enum import Enum
 from functools import wraps
-from typing import Any, Callable, overload, TypeVar
-
-TVar = TypeVar('TVar')
+from typing import Any, Callable, overload
 
 
 class Package:
@@ -40,7 +38,7 @@ _g: dict[str, SingletonInfo] = globals()[GLOBAL_KEY]
 RETURN_POSTFIX = '.@cached_return'
 
 
-def is_exists(dn: str) -> bool:
+def is_singleton_exists(dn: str) -> bool:
     """
     Returns whether the singleton object with the given domain name exists.
 
@@ -178,7 +176,7 @@ class SecondCallingBehaviour(Enum):
     RaiseError = 'e'
 
     """
-    Returns `None`.
+    Returns `None` without cache.
     """
     NoneToReturn = None
 
@@ -197,6 +195,9 @@ def _add_cached_return(dn: str, value: Any) -> None:
 def get_cached_return(dn: str) -> Any:
     """
     Get the cached return value of a function decorated with `@once`.
+
+    By the way, If its `second_calling` isn't `SecondCallingBehaviour.RaiseError`,
+    you can call the function once again to get the cached return value.
 
     :param dn: The unique domain name of the function.
     :return: The cached return value.
