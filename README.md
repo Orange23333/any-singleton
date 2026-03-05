@@ -17,7 +17,7 @@ python -m pip install any-singleton
 
 ### Create a singleton
 
-> Register a singleton with a value:
+Register a singleton with a value:
 ```python
 from any_singleton import singleton
 
