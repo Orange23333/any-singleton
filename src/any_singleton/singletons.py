@@ -17,12 +17,6 @@ class SealedObject:
         self.__value = value
 
 
-#class Singleton: pass
-
-
-#class SingletonObject: pass
-
-
 class SingletonInfo:
     def __init__(self, dn: str, instance: Any) -> None:
         self.__dn: str = dn
@@ -274,9 +268,6 @@ def once(
 
         if dn in _g:
             wrapper = _get_singleton(dn)
-
-            # if not isinstance(wrapper, Callable):
-            #    raise TypeError(f'"{dn}" has been registered with a non-callable object.')
 
             return wrapper
         else:
