@@ -1,6 +1,18 @@
 <div align="center">
     <h1>Any-singleton</h1>
     <p>Provides decorators and utilities for implementing the singleton pattern.</p>
+    <a href="https://github.com/Orange23333/any-singleton/">
+        <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/Orange23333/any-singleton" />
+    </a>
+    <a href="https://github.com/Orange23333/any-singleton/blob/main/LICENSE.txt">
+        <img alt="PyPI - License" src="https://img.shields.io/pypi/l/any-singleton" />
+    </a>
+    <a href="https://pypi.org/project/any-singleton/">
+        <img alt="PyPI - Version" src="https://img.shields.io/pypi/v/any-singleton" />
+    </a>
+    <a href="https://pypi.org/project/any-singleton/">
+        <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/any-singleton" />
+    </a>
 </div>
 
 ---
@@ -72,7 +84,7 @@ def init(config_path: str) -> None:
 # ATTENTION
 
 - `any-singleton` will **OCCUPY** the global variable `_any_singleton`, see `any_singleton.singletons.GLOBAL_KEY`.
-- **DO NOT** use `@cached_return` as a domain name. It's a **RESERVED** word.
+- **DO NOT** use `*.@cached_return` and `any_singleton.nonreferenced_types` as a domain name. They're **RESERVED** words.
 
 ---
 

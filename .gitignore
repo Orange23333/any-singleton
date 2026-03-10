@@ -177,4 +177,12 @@ pyrightconfig.json
 
 
 
-# Project
+# === Project ===
+
+# Profiles
+/.idea/
+/.jbeval/
+
+# Output
+/.coverage
+/htmlcov/
